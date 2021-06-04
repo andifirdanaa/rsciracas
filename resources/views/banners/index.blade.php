@@ -20,7 +20,7 @@
                             <form>
                                 <div class="input-group no-border">
                                     <input type="text" value="" class="form-control" placeholder="Search...">
-                                    <button class="input-group-append border-0">
+                                    <button class="input-group-append border-0" style="cursor: pointer;">
                                         <div class="input-group-text border-0">
                                             <i class="nc-icon nc-zoom-split"></i>
                                         </div>

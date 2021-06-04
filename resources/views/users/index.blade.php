@@ -17,11 +17,21 @@
                 <div class="card shadow">
                     <div class="card-header border-0">
                         <div class="row align-items-center">
-                            <div class="col-8">
+                            <div class="col-md-6 col-sm-12">
                                 <h3 class="mb-0">Users</h3>
-                            </div>
-                            <div class="col-4 text-right">
                                 <a href="{{route('user.create')}}" class="btn btn-sm btn-primary">Add user</a>
+                            </div>
+                            <div class="col-md-6 col-sm-12 text-right">
+                            <form>
+                                <div class="input-group no-border">
+                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                    <button class="input-group-append border-0" style="cursor: pointer;">
+                                        <div class="input-group-text border-0">
+                                            <i class="nc-icon nc-zoom-split"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </form>
                             </div>
                         </div>
                     </div>
