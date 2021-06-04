@@ -6,7 +6,7 @@
             </div>
         </a>
         <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-            {{ __('Creative Tim') }}
+            {{ __('RSUD CIRACAS') }}
         </a>
     </div>
     <div class="sidebar-wrapper">
@@ -42,13 +42,19 @@
                     </ul>
                 </div>
             </li>
-            <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
+             <li class="{{ $elementActive == 'banner' ? 'active' : '' }}">
+                <a href="{{ route('banner.index') }}">
+                    <i class="nc-icon nc-diamond"></i>
+                    <p>{{ __('Banner') }}</p>
+                </a>
+            </li>
+            <!-- <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'icons') }}">
                     <i class="nc-icon nc-diamond"></i>
                     <p>{{ __('Icons') }}</p>
                 </a>
-            </li>
-            <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
+            </li> -->
+            <!-- <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'map') }}">
                     <i class="nc-icon nc-pin-3"></i>
                     <p>{{ __('Maps') }}</p>
@@ -59,23 +65,11 @@
                     <i class="nc-icon nc-bell-55"></i>
                     <p>{{ __('Notifications') }}</p>
                 </a>
-            </li>
+            </li> -->
             <li class="{{ $elementActive == 'tables' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'tables') }}">
                     <i class="nc-icon nc-tile-56"></i>
                     <p>{{ __('Table List') }}</p>
-                </a>
-            </li>
-            <li class="{{ $elementActive == 'typography' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'typography') }}">
-                    <i class="nc-icon nc-caps-small"></i>
-                    <p>{{ __('Typography') }}</p>
-                </a>
-            </li>
-            <li class="active-pro {{ $elementActive == 'upgrade' ? 'active' : '' }} bg-danger">
-                <a href="{{ route('page.index', 'upgrade') }}">
-                    <i class="nc-icon nc-spaceship text-white"></i>
-                    <p class="text-white">{{ __('Upgrade to PRO') }}</p>
                 </a>
             </li>
         </ul>

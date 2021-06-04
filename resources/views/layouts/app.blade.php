@@ -62,7 +62,7 @@ The above copyright notice and this permission notice shall be included in all c
     <meta property="og:site_name" content="Creative Tim" />
     
     <title>
-        {{ __('Paper Dashboard by Creative Tim') }}
+        {{ __('RSUD Ciracas') }}
     </title>
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no'
         name='viewport' />
@@ -76,11 +76,11 @@ The above copyright notice and this permission notice shall be included in all c
     <link href="{{ asset('paper') }}/demo/demo.css" rel="stylesheet" />
 
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    <!-- <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NKDMSK6');</script>
+    })(window,document,'script','dataLayer','GTM-NKDMSK6');</script> -->
     <!-- End Google Tag Manager -->
 </head>
 
@@ -92,7 +92,7 @@ The above copyright notice and this permission notice shall be included in all c
     
     @auth()
         @include('layouts.page_templates.auth')
-        @include('layouts.navbars.fixed-plugin')
+        <!-- @include('layouts.navbars.fixed-plugin') -->
     @endauth
     
     @guest
@@ -105,7 +105,7 @@ The above copyright notice and this permission notice shall be included in all c
     <script src="{{ asset('paper') }}/js/core/bootstrap.min.js"></script>
     <script src="{{ asset('paper') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
     <!--  Google Maps Plugin    -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+   <!--  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script> -->
     <!-- Chart JS -->
     <script src="{{ asset('paper') }}/js/plugins/chartjs.min.js"></script>
     <!--  Notifications Plugin    -->
@@ -115,11 +115,11 @@ The above copyright notice and this permission notice shall be included in all c
     <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
     <script src="{{ asset('paper') }}/demo/demo.js"></script>
     <!-- Sharrre libray -->
-    <script src="../assets/demo/jquery.sharrre.js"></script>
+    <!-- <script src="../assets/demo/jquery.sharrre.js"></script> -->
     
     @stack('scripts')
 
-    @include('layouts.navbars.fixed-plugin-js')
+    <!-- @include('layouts.navbars.fixed-plugin-js') -->
 </body>
 
 </html>
