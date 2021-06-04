@@ -50,7 +50,7 @@ class BannerController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-        'image'=>'required'
+        'image'=> 'required|image|mimes:jpg,png,jpeg,svg|max:2048'
         ]);
         $data = $request->all();
         if($request->image){

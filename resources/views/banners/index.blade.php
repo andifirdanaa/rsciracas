@@ -5,15 +5,29 @@
 
 @section('content')
 
-    <div class="content">
-        <div class="container-fluid mt--7">
-            <div class="row">
-                <div class="col-md-12">
+<div class="content">
+    <div class="container-fluid mt--7">
+        <div class="row">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="card-title"> Banner Table</h4>
-                        <div class="">
-                            <a href="{{route('banner.create')}}" type="button" style="text-decoration: none;" class="btn btn-sm btn-primary">Create</a>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <a href="{{route('banner.create')}}" type="button" style="text-decoration: none;" class="btn btn-sm btn-primary">Create</a>
+                            </div>
+                            <div class="col-md-6">
+                            <form>
+                                <div class="input-group no-border">
+                                    <input type="text" value="" class="form-control" placeholder="Search...">
+                                    <button class="input-group-append border-0">
+                                        <div class="input-group-text border-0">
+                                            <i class="nc-icon nc-zoom-split"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </form>
+                            </div>
                         </div>
                     </div>
                     <div class="card-body">
@@ -85,7 +99,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </div>

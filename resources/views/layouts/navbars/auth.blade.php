@@ -66,12 +66,12 @@
                     <p>{{ __('Notifications') }}</p>
                 </a>
             </li> -->
-            <li class="{{ $elementActive == 'tables' ? 'active' : '' }}">
+            <!-- <li class="{{ $elementActive == 'tables' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'tables') }}">
                     <i class="nc-icon nc-tile-56"></i>
                     <p>{{ __('Table List') }}</p>
                 </a>
-            </li>
+            </li> -->
         </ul>
     </div>
 </div>
