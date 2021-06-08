@@ -54,18 +54,18 @@
                     <p>{{ __('User Role') }}</p>
                 </a>
             </li>
-            <!-- <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'map') }}">
+            <li class="{{ $elementActive == 'modul' ? 'active' : '' }}">
+                <a href="{{ route('modul.index') }}">
                     <i class="nc-icon nc-pin-3"></i>
-                    <p>{{ __('Maps') }}</p>
+                    <p>{{ __('Modul') }}</p>
                 </a>
             </li>
-            <li class="{{ $elementActive == 'notifications' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'notifications') }}">
+            <li class="{{ $elementActive == 'akses_modul' ? 'active' : '' }}">
+                <a href="{{ route('akses.index') }}">
                     <i class="nc-icon nc-bell-55"></i>
-                    <p>{{ __('Notifications') }}</p>
+                    <p>{{ __('Akses Modul') }}</p>
                 </a>
-            </li> -->
+            </li>
             <!-- <li class="{{ $elementActive == 'tables' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'tables') }}">
                     <i class="nc-icon nc-tile-56"></i>
