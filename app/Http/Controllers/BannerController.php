@@ -17,7 +17,7 @@ class BannerController extends Controller
     {   
         $no = 1;
         $banner = Banner::paginate(10);
-        return view("banners.index",[
+        return view("admin.banners.index",[
             'banner' => $banner,
             'no' => $no
         ]);
@@ -36,7 +36,7 @@ class BannerController extends Controller
         // return redirect('/siswa')-> with('sukses','Data Berhasil Diinput');
         $banner = Banner::all();
         
-        return view('banners.create',[
+        return view('admin.banners.create',[
             'banner'=>$banner
         ]);
     }
@@ -88,7 +88,7 @@ class BannerController extends Controller
     {
         $data = Banner::findOrFail($id);
 
-        return view('banners.edit', [
+        return view('admin.banners.edit', [
         'data' => $data
         ]);
     }

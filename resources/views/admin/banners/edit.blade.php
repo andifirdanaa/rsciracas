@@ -24,6 +24,19 @@
                         </div>
                         <div class="card-body">
                             <div class="row">
+                                <label class="col-md-3 col-form-label">{{ __('Preview Image Lama') }}</label>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <img  src="{{asset('images/'.$data->id.'/'.$data->image)}}" id="preview" width="350px" style="margin-top:10px" />
+                                    </div>
+                                    @if ($errors->has('image'))
+                                        <span class="invalid-feedback" style="display: block;" role="alert">
+                                            <strong>{{ $errors->first('image') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="row">
                                 <label class="col-md-3 col-form-label">{{ __('Image') }}</label>
                                 <div class="col-md-9">
                                     <div class="form-group">
@@ -79,3 +92,28 @@
         </div>
     </div>
 @endsection
+<script type="text/javascript">
+    function tampilkanPreview(userfile, idpreview) {
+        var gb = userfile.files;
+        for (var i = 0; i < gb.length; i++) {
+            var gbPreview = gb[i];
+            var imageType = /image.*/;
+            var preview = document.getElementById(idpreview);
+            var reader = new FileReader();
+            if (gbPreview.type.match(imageType)) {
+                //jika tipe data sesuai
+                preview.file = gbPreview;
+                reader.onload = (function (element) {
+                    return function (e) {
+                        element.src = e.target.result;
+                    };
+                })(preview);
+                //membaca data URL gambar
+                reader.readAsDataURL(gbPreview);
+            } else {
+                //jika tipe data tidak sesuai
+                alert("Tipe file tidak sesuai. Gambar harus bertipe .png, .gif atau .jpg.");
+            }
+        }
+    }
+</script>

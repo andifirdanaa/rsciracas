@@ -25,7 +25,7 @@ class UserController extends Controller
         $no = 1;
         $users = User::with('UserRole')->paginate(10);
 
-        return view('users.index', [
+        return view('admin.users.index', [
         'users' => $users,
         'no' => $no,
         ]);
@@ -40,7 +40,7 @@ class UserController extends Controller
 
         $user = User::all();
         
-        return view('users.create',[
+        return view('admin.users.create',[
             'user'=>$user
         ]);
     }
@@ -83,7 +83,7 @@ class UserController extends Controller
     {
         $data = User::findOrFail($id);
 
-        return view('users.edit', [
+        return view('admin.users.edit', [
         'data' => $data
         ]);
     }
