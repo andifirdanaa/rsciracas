@@ -48,12 +48,12 @@
                     <p>{{ __('Banner') }}</p>
                 </a>
             </li>
-            <!-- <li class="{{ $elementActive == 'icons' ? 'active' : '' }}">
-                <a href="{{ route('page.index', 'icons') }}">
+            <li class="{{ $elementActive == 'role' ? 'active' : '' }}">
+                <a href="{{ route('role.index') }}">
                     <i class="nc-icon nc-diamond"></i>
-                    <p>{{ __('Icons') }}</p>
+                    <p>{{ __('User Role') }}</p>
                 </a>
-            </li> -->
+            </li>
             <!-- <li class="{{ $elementActive == 'map' ? 'active' : '' }}">
                 <a href="{{ route('page.index', 'map') }}">
                     <i class="nc-icon nc-pin-3"></i>

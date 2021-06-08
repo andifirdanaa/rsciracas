@@ -43,6 +43,7 @@
                                                 <th scope="col">No</th>
                                                 <th scope="col">Name</th>
                                                 <th scope="col">Email</th>
+                                                <th scope="col">Role ID</th>
                                                 <th scope="col">Creation Date</th>
                                                 <th scope="col">Aksi</th>
                                             </tr>
@@ -55,6 +56,7 @@
                                                 <td>
                                                     {{$data->email}}
                                                 </td>
+                                                <td>{{$data->UserRole->name}}</td>
                                                 <td>{{$data->created_at}}</td>
                                                 <td class="text-center">
                                                 <form action="{{ route('user.destroy',$data->id) }}" method="POST">

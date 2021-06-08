@@ -28,6 +28,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('banner','BannerController');
+Route::resource('role','UserRoleController');
 
 
 

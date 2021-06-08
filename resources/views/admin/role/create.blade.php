@@ -1,51 +1,33 @@
 @extends('layouts.app', [
     'class' => '',
-    'elementActive' => 'banner'
+    'elementActive' => 'role'
 ])
 
 @section('content')
     <div class="content">
-                    @if($errors->any())
-                        <div class="alert alert-danger">
-                            <ul>
-                                @foreach($errors->all() as $error)
-                                    <li>{{ $error }}</li>
-                                @endforeach
-                            </ul>
-                        </div>
-                    @endif
+        @if (session('status'))
+            <div class="alert alert-success" role="alert">
+                {{ session('status') }}
+            </div>
+        @endif
             <div class="col-md-12 text-center">
-                <form class="col-md-12" action="{{ route('banner.store') }}" method="POST" enctype="multipart/form-data">
+                <form class="col-md-12" action="{{ route('role.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
                     <div class="card">
                         <div class="card-header">
-                            <h5 class="title">{{ __('Create Banner') }}</h5>
+                            <h5 class="title">{{ __('Create Role') }}</h5>
                         </div>
                         <div class="card-body">
                             <div class="row">
-                                <label class="col-md-3 col-form-label">{{ __('Image') }}</label>
+                                <label class="col-md-3 col-form-label">{{ __('Name Role') }}</label>
                                 <div class="col-md-9">
                                     <div class="form-group">
-                                        <input type="file" name="image" id ="image_id" class="form-control"  onchange="tampilkanPreview(this,'preview')">
-                                        <img id="preview" width="350px" style="margin-top:10px" />
+                                        <input type="text" name="name" class="form-control" placeholder="name">
                                     </div>
-                                    @if ($errors->has('image'))
+                                    @if ($errors->has('name'))
                                         <span class="invalid-feedback" style="display: block;" role="alert">
-                                            <strong>{{ $errors->first('image') }}</strong>
-                                        </span>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="row">
-                                <label class="col-md-3 col-form-label">{{ __('Short Desc') }}</label>
-                                <div class="col-md-9">
-                                    <div class="form-group">
-                                        <input type="text" name="short_desc" class="form-control" placeholder="short desc">
-                                    </div>
-                                    @if ($errors->has('short_desc'))
-                                        <span class="invalid-feedback" style="display: block;" role="alert">
-                                            <strong>{{ $errors->first('short_desc') }}</strong>
+                                            <strong>{{ $errors->first('name') }}</strong>
                                         </span>
                                     @endif
                                 </div>
@@ -71,7 +53,7 @@
                             <div class="row">
                                 <div class="col-md-12 text-center">
                                     <button type="submit" class="btn btn-info btn-round">{{ __('Save') }}</button>
-                                    <a href="{{route('banner.index')}}" class="btn btn-info btn-round" type="button">{{ __('Back') }}</a>
+                                    <a href="{{route('role.index')}}" class="btn btn-info btn-round" type="button">{{ __('Back') }}</a>
                                 </div>
                             </div>
                         </div>

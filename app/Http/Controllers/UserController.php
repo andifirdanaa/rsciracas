@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 
 use App\User;
+use App\UserRole;
+
 
 
 class UserController extends Controller
@@ -21,10 +23,11 @@ class UserController extends Controller
     public function index()
     {
         $no = 1;
-        $users = User::paginate(10);
+        $users = User::with('UserRole')->paginate(10);
+
         return view('users.index', [
         'users' => $users,
-        'no' => $no
+        'no' => $no,
         ]);
     }
     /**
