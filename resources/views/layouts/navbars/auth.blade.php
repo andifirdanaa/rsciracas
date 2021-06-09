@@ -21,7 +21,7 @@
                 <a data-toggle="collapse" aria-expanded="true" href="#laravelExamples">
                     <i class="nc-icon"><img src="{{ asset('paper/img/laravel.svg') }}"></i>
                     <p>
-                            {{ __('Laravel examples') }}
+                            {{ __('User') }}
                         <b class="caret"></b>
                     </p>
                 </a>

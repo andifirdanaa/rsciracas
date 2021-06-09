@@ -59,7 +59,7 @@
                                             {{ $item->Modul->modul }}
                                         </td>
                                         <td>
-                                            {{ $item->user_role_id }}
+                                            {{ $item->UserRole->name }}
                                         </td>
                                         <td class="text-center">
                                                 <form action="{{ route('akses.destroy',$item->id) }}" method="POST">

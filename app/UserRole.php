@@ -17,4 +17,8 @@ class UserRole extends Model
     {
         return $this->hasMany(User::class);
     }
+     public function AksesModul()
+    {
+        return $this->hasMany(AksesModul::class);
+    }
 }

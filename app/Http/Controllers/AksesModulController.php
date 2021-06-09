@@ -117,4 +117,13 @@ class AksesModulController extends Controller
 
         return redirect()->route('modul.index')->withInfo('Berhasil Di Hapus');
     }
+
+    public function findByRole()
+    {
+    	$data = AksesModul::all();
+
+    	return view('layouts.navbars.auth', [
+        'data' => $data,
+        ]);
+    }
 }

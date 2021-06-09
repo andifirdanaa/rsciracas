@@ -14,4 +14,8 @@ class AksesModul extends Model
     {
         return $this->belongsTo(Modul::class);
     }
+     public function UserRole()
+    {
+        return $this->belongsTo(UserRole::class);
+    }
 }
